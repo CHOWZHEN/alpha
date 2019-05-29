@@ -33,13 +33,13 @@ orient:<span id="orient"></span><br/>
         document.querySelector('body').innerHTML = '你的浏览器不支持陀螺仪';
     }
 	
-	   if (window.ScreenOrientationChangeEvent) {
+	   if (window.OrientationChangeEvent) {
         window.addEventListener('orientationchange', function (event) {
             var o = document.getElementById('orient'),
                
-                orient = event.orient,
+                orient = event.orientation,
               
-           o.innerHTML = Math.round(orient);
+            o.innerHTML = Math.round(orient);
  
         }, false);
     } else {

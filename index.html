@@ -35,7 +35,7 @@ orient:<span id="orient "></span><br/>
 	
 	window.addEventListener('orientationchange',function(event){
 	 var o = document.getElementById('orient');
-	  orient = event.orientation;
+	  orient = event.orientation||0;
 	   o.innerHTML = Math.round(orient);
 });
 

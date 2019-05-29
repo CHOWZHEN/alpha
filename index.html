@@ -33,9 +33,9 @@ orient:<span id="orient "></span><br/>
         document.querySelector('body').innerHTML = '你的浏览器不支持陀螺仪';
     }
 	
-	window.addEventListener('orientationchange',function(event){
+	window.addEventListener('orientationchange',function(){
 	 var o = document.getElementById('orient');
-	  orient = event.orientation||0;
+	  orient = window.orientation||0;
 	   o.innerHTML = Math.round(orient);
 });
 

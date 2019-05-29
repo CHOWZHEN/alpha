@@ -12,6 +12,7 @@
 alpha:<span id="alpha"></span><br/>
 beta:<span id="beta"></span><br/>
 gamma:<span id="gamma"></span><br/>
+orient:<span id="orient"></span><br/>
 </body>
 <script>
     if (window.DeviceOrientationEvent) {
@@ -26,6 +27,19 @@ gamma:<span id="gamma"></span><br/>
             a.innerHTML = Math.round(alpha);
             b.innerHTML = Math.round(beta);
             g.innerHTML = Math.round(gamma);
+ 
+        }, false);
+    } else {
+        document.querySelector('body').innerHTML = '你的浏览器不支持陀螺仪';
+    }
+	
+	   if (window.ScreenOrientationChangeEvent) {
+        window.addEventListener('orientationchange', function (event) {
+            var o = document.getElementById('orient'),
+               
+                orient = event.orient,
+              
+           o.innerHTML = Math.round(orient);
  
         }, false);
     } else {

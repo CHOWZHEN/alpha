@@ -32,10 +32,9 @@ gamma:<span id="gamma"></span><br/>
         document.querySelector('body').innerHTML = '你的浏览器不支持陀螺仪';
     }
 	
-	  if (window.OrientationChangeEvent){
-	 window.addEventListener('orientationchange',function(){
+	window.addEventListener('orientationchange',function(){
     alert("the orientation fo the device is now " + window.orientation);
 },false);
-}
+
 </script>
 
